@@ -1,0 +1,14 @@
+#!/bin/bash
+
+CONFIG="$HOME/.config/hypr/waybar/config"
+STYLE="$HOME/.config/hypr/waybar/style.css"
+
+if [[ ! $(pidof waybar) ]]; then
+  waybar --bar main-bar --log-level error --config ${CONFIG} --style ${STYLE}
+fi
+# Alternative Bar/Panel nwg-panel
+#CONFIG="$HOME/.config/nwg-panel/config"
+#STYLE="$HOME/.config/nwg-panel/style.css"
+#if [[ ! $(pidof nwg-panel) ]]; then
+#  nwg-panel -c ${CONFIG} -s ${STYLE}
+#fi

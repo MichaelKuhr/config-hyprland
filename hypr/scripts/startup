@@ -1,0 +1,15 @@
+#!/bin/bash
+
+SCRIPTSDIR=$HOME/.config/hypr/scripts
+
+# Apply themes
+${SCRIPTSDIR}/gtkthemes &
+
+# Lauch notification daemon (mako)
+${SCRIPTSDIR}/notifications &
+
+# Lauch statusbar (waybar)
+${SCRIPTSDIR}/statusbar &
+
+# Xauthority
+${SCRIPTSDIR}/xauthority &
